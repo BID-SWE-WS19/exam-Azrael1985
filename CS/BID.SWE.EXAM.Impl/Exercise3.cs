@@ -34,8 +34,8 @@ namespace BID.SWE.EXAM.Impl
 
         public override string GetMapName()
         {
-            string mapname = "BID-Map";
-            return mapname;
+            
+            return "BID-Map";
         }
 
         public override float GetMapSize(float amount)
@@ -57,7 +57,7 @@ namespace BID.SWE.EXAM.Impl
 
         public string Move(int x)
         {
-            string myMove = "Moved " + x + " Values";
+            string myMove = $"Moved {x} Values";
             return myMove;
         }
         public class Laufen : Bewegung
@@ -70,5 +70,4 @@ namespace BID.SWE.EXAM.Impl
 
         }
     }
-}
 }
