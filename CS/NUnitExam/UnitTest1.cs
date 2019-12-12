@@ -12,6 +12,7 @@ namespace NUnitExam
         [Test]
         public void Test1()
         {
+            var x = 
             Assert.Pass();
         }
     }
