@@ -7,22 +7,36 @@ namespace BID.SWE.EXAM.Impl
     {
         public object Method1()
         {
-            var x = new Aufgabe2();
-            return x;
+            return new MyCell();
         }
 
         public int Method2()
         {
-            var x = new Aufgabe2();
-            return x.Grow();
-
+            return new MyCell().Grow();
         }
 
         public bool Method3(int o1)
         {
-            var x =new Aufgabe2();
-            var y=x.Method3(o1);
-            return y;
+            return new MyCell().IsAlive(o1);
+        }
+    }
+
+    public class MyCell : Cell
+    {
+        public override int Grow()
+        {
+            return _size * 2;
+        }
+        public bool IsAlive(int neighbour)
+        {
+            if (neighbour % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
