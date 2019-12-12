@@ -1,12 +1,10 @@
 ﻿using BID.SWE1.Exam.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BID.SWE.EXAM.Impl
 {
-    class Aufgabe2 : Cell
+    public class Aufgabe2 : Cell
     {
+  
         public object Method1()
         {
             var x = new Cell();
@@ -25,7 +23,14 @@ namespace BID.SWE.EXAM.Impl
         {
             Cell D = new Cell();
             bool h = D.IsAlive();
-            return h;
+            if (h && o1 >= 1)
+                return true;
+            else if (h && o1 == 0)
+                return true;
+            else if (!h && o1 >= 1)
+                return true;
+            else
+                return false;
         }
     }
 }
